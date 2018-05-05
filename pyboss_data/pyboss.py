@@ -3,8 +3,9 @@ import os
 import csv
 import datetime
 
-file_to_load = "employee_data1.csv"
-file_to_output = os.path.join()
+#files to load/output
+file_to_load = "data/employee_data1.csv"
+file_to_output = "analysis/employee_data_reformatted1.csv"
 
 # Dictionary of states with abbreviations
 us_state_abbrev = {

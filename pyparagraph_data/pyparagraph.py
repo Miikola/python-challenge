@@ -3,7 +3,7 @@ import re
 
 # Files to load and output 
 file_to_load = "paragraph_1.txt"
-file_to_output = ""
+file_to_output = "analysis/paragraphanalysis.txt"
 
 # String variable to hold the paragraph contents
 paragraph = ""
@@ -27,10 +27,10 @@ for word in word_split:
     # Add each letter count into the letter_counts list
     letter_counts.append(len(word))
 
-# Calculate the avg letter count
+# Calculate averages for letter count
 avg_letter_count = sum(letter_counts) / float(len(letter_counts))
 
-# Re-split the original paragraph based on punctuation (. ? !)
+# Re-split paragraph based on punctuation
 sentence_split = re.split("(?<=[.!?]) +", paragraph)
 
 print(sentence_split)
