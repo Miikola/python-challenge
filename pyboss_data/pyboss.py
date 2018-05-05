@@ -73,8 +73,7 @@ with open(file_to_load) as emp_data:
     reader = csv.DictReader(emp_data)
 
     for row in reader: 
-
-    empID = empID + [row["Emp ID]]
+        empID = empID + [row["Emp ID"]]
 
 #reformat name
     split_name = row["Name"].split(" ")
@@ -83,7 +82,7 @@ with open(file_to_load) as emp_data:
 
 #reformat dob
     reformatted_dob = datetime.datetime.strptime(row["DOB"], "%Y-%m-%d")
-    reformatted_dob = reformatted_dob.strftime('%m/%d/%Y")
+    reformatted_dob = reformatted_dob.strftime("%m/%d/%Y")
 
     dob = dob + [reformatted_dob]
 
@@ -101,12 +100,12 @@ with open(file_to_load) as emp_data:
 
 empzip = zip(empID, firstname, lastname, dob, ssn, state)
 
-with open(file_to_output, "w" newline="") as datafile:
-        writer = csv.writer(datafile)
+with open(file_to_output, "w", newline="") as datafile:
+    writer = csv.writer(datafile)
         
-        writer.writerow(["Emp ID", "First Name", "Last Name", "DOB", "SSN", "State"])
+    writer.writerow(["Emp ID", "First Name", "Last Name", "DOB", "SSN", "State"])
 
-        writer.writerows(empzip)
+    writer.writerows(empzip)
 
         
 

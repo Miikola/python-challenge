@@ -2,7 +2,7 @@
 import re
 
 # Files to load and output 
-file_to_load = "paragraph_1.txt"
+file_to_load = "data/paragraph_1.txt"
 file_to_output = "analysis/paragraphanalysis.txt"
 
 # String variable to hold the paragraph contents
